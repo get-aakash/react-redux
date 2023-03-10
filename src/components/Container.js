@@ -1,14 +1,11 @@
-import React from 'react'
-import Display from './Display'
+import React from "react";
+import { Display } from "./Display";
 
-const Container = ({nameList}) => {
+export const Container = () => {
   return (
     <div>
-        <h3>Data Are shown below</h3>
-      <Display nameList={nameList} />
+      <h3>Data are show below:</h3>
+      <Display />
     </div>
-  )
-}
-
-export default Container
-
+  );
+};

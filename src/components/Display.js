@@ -1,14 +1,17 @@
-import React from 'react'
+import React from "react";
+import { useSelector } from "react-redux";
 
-const Display = ({nameList}) => {
+
+export const Display = () => {
+  const {userList} = useSelector((state)=>state.item)
+  
   return (
     <div>
       <ul>
-        {nameList.map((item,i)=><li key={i}>{item}</li>)}
-        
+        {userList.map((item) => (
+          <li>{item}</li>
+        ))}
       </ul>
     </div>
-  )
-}
-
-export default Display
+  );
+};
